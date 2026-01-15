@@ -1,8 +1,6 @@
 from typing import List, Dict
 from pathlib import Path
-
 from pypdf import PdfReader
-
 
 def load_pdf(file_path: str) -> List[Dict]:
     """
