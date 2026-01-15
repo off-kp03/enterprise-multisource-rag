@@ -1,11 +1,11 @@
 import shutil
 from pathlib import Path
 from fastapi import APIRouter, UploadFile, File, HTTPException
-from ingestion.pipeline import IngestionPipeline
+from app.ingestion.pipeline import IngestionPipeline
 
 router = APIRouter()
 
-UPLOAD_DIR = Path("backend/app/data/uploads")
+UPLOAD_DIR = Path("app/data/uploads")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
 # IMPORTANT:

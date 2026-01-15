@@ -1,4 +1,8 @@
 fastapi
 uvicorn
-pydantic
-python-dotenv
+pypdf
+tiktoken
+sentence-transformers
+torch
+faiss-cpu
+numpy
