@@ -1,15 +1,15 @@
 from pathlib import Path
 from typing import List, Dict
-from ingestion.loaders.pdf_loader import PDFLoader
-from ingestion.chunking.text_chunker import TextChunker
-from embeddings.embedding_model import EmbeddingModel
+from app.ingestion.pdf_loader import PDFLoader
+from app.ingestion.chunker import TextChunker
+from app.vectorstore.embeddings import EmbeddingModel
 from vectorstore.faiss_store import FAISSVectorStore
 
 class IngestionPipeline:
     def __init__(
         self,
         embedding_dim: int,
-        vector_store_path: str = "backend/data/vector_store"
+        vector_store_path: str = "backend/app/data/vector_store"
     ):
         self.loader = PDFLoader()
         self.chunker = TextChunker()

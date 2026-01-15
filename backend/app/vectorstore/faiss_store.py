@@ -6,7 +6,7 @@ import numpy as np
 
 
 class FAISSVectorStore:
-    def __init__(self, dim: int, store_path: str = "backend/data/vector_store"):
+    def __init__(self, dim: int, store_path: str = "backend/app/data/vector_store"):
         self.dim = dim
         self.store_path = Path(store_path)
         self.store_path.mkdir(parents=True, exist_ok=True)
